@@ -4,9 +4,10 @@
 // carrinho, o usuário e os pedidos no localStorage.
 // =========================================================
 
-// se a página estiver dentro da pasta "pages", os caminhos precisam de "../"
-const RAIZ = location.pathname.includes('/pages/') ? '../' : './';
-const PAGINAS = RAIZ === './' ? 'pages/' : '';
+// descobre a raiz do site pelo endereço do próprio main.js (que fica em "js/"),
+// assim os links funcionam no Live Server, no GitHub Pages e dentro de "pages"
+const RAIZ = document.currentScript.src.replace(/js\/main\.js(\?.*)?$/, '');
+const PAGINAS = 'pages/';
 const IMG = RAIZ + 'img/';
 
 // ---------------------------------------------------------
