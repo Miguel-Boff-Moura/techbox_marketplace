@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/catalogo.css">
+    <title>TechBox | Catálogo</title>
+</head>
+<body class="com-abas" data-aba="categorias">
+    <script>
+        // marca no menu qual categoria está aberta (precisa rodar antes do main.js)
+        const categoriaUrl = new URLSearchParams(location.search).get('categoria') || '';
+        document.body.dataset.pagina = categoriaUrl;
+        document.body.dataset.titulo = categoriaUrl === 'notebooks' ? 'Notebooks' : categoriaUrl === 'smartphones' ? 'Smartphones' : 'Catálogo';
+    </script>
+
+    <header id="cabecalho"></header>
+
+    <main class="container catalogo-pagina">
+        <nav class="trilha" aria-label="Você está em">
+            <a href="../index.html">Home</a>
+            <img src="../img/icones/chevron-right.svg" alt="" width="13" height="13">
+            <strong id="trilha-atual">Catálogo</strong>
+        </nav>
+
+        <div class="catalogo__cabecalho">
+            <div class="so-desktop">
+                <h1 id="titulo-catalogo">Catálogo</h1>
+                <p id="subtitulo-catalogo"></p>
+            </div>
+
+            <!-- chips de filtro rápido (mobile) -->
+            <div class="chips so-mobile" id="chips">
+                <button class="chip chip--filtros" type="button" id="abrir-filtros">
+                    <img src="../img/icones/sliders.svg" alt="" width="16" height="16">
+                    Filtros
+                </button>
+            </div>
+
+            <div class="catalogo__resumo">
+                <span id="total-produtos">0 produtos</span>
+                <label class="ordenar">
+                    <select id="ordenar" aria-label="Ordenar produtos">
+                        <option value="relevantes">Mais relevantes</option>
+                        <option value="menor">Menor preço</option>
+                        <option value="maior">Maior preço</option>
+                        <option value="avaliados">Melhor avaliados</option>
+                    </select>
+                    <img class="so-desktop" src="../img/icones/chevron-down.svg" alt="" width="15" height="15">
+                    <img class="so-mobile" src="../img/icones/chev-d-escuro-16.svg" alt="" width="16" height="16">
+                </label>
+            </div>
+        </div>
+
+        <div class="catalogo">
+            <!-- filtros: no desktop é a coluna da esquerda, no mobile vira uma folha que sobe -->
+            <div class="fundo-filtros" id="fundo-filtros"></div>
+            <aside class="filtros" id="filtros">
+                <div class="filtros__cabecalho">
+                    <h2>Filtros</h2>
+                    <button type="button" class="link" id="limpar-filtros">Limpar</button>
+                </div>
+                <form id="form-filtros"></form>
+                <button type="button" class="btn btn--primario btn--bloco filtros__ver so-mobile" id="ver-produtos">Ver produtos</button>
+            </aside>
+
+            <section class="resultados">
+                <div class="grade-produtos" id="grade-catalogo"></div>
+
+                <div class="sem-resultados escondido" id="sem-resultados">
+                    <h3>Nenhum produto encontrado</h3>
+                    <p>Tente mudar os filtros ou buscar por outro nome.</p>
+                    <button type="button" class="btn btn--secundario" id="limpar-busca">Limpar filtros</button>
+                </div>
+
+                <nav class="paginacao so-desktop" id="paginacao" aria-label="Páginas"></nav>
+
+                <div class="ver-mais so-mobile" id="ver-mais">
+                    <span id="mostrando"></span>
+                    <button type="button" class="btn btn--contorno btn--bloco" id="btn-ver-mais">Ver mais produtos</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/catalogo.js"></script>
+</body>
+</html>

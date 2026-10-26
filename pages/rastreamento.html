@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pedido.css">
+    <title>TechBox | Rastreamento</title>
+</head>
+<body class="com-abas" data-aba="conta" data-titulo="Rastreamento" data-voltar="compras.html">
+
+    <header id="cabecalho"></header>
+
+    <main class="rastreio">
+        <nav class="trilha" aria-label="Você está em">
+            <a href="../index.html">Home</a>
+            <img src="../img/icones/chevron-right.svg" alt="" width="13" height="13">
+            <strong>RASTREAMENTO</strong>
+        </nav>
+
+        <!-- previsão -->
+        <section class="previsao">
+            <div class="previsao__topo">
+                <div class="previsao__data">
+                    <span class="previsao__rotulo so-mobile">PREVISÃO DE ENTREGA</span>
+                    <h1><span class="so-desktop">Entrega: </span><span id="data-entrega">20 a 26 de out.</span></h1>
+                    <img class="so-desktop" src="../img/icones/info.svg" alt="" width="16" height="16" title="Prazo calculado a partir da data do pedido">
+                </div>
+                <p class="previsao__protegida so-desktop">
+                    <img src="../img/icones/shield-verde.svg" alt="" width="22" height="22">
+                    Entrega protegida
+                </p>
+                <span class="selo selo--laranja so-mobile" id="selo-status-mobile">Em preparação</span>
+            </div>
+            <div class="previsao__garantias so-desktop">
+                <p class="previsao__rapida"><img src="../img/icones/zap.svg" alt="" width="16" height="16"> Entrega rápida</p>
+                <ul>
+                    <li><img src="../img/icones/check-verde-esc.svg" alt="" width="12" height="12"> Cupom de R$ 5,00 em caso de atraso</li>
+                    <li><img src="../img/icones/check-verde-esc.svg" alt="" width="12" height="12"> Reembolso se não houver atualização em 20 dias</li>
+                    <li><img src="../img/icones/check-verde-esc.svg" alt="" width="12" height="12"> Reembolso se os itens estiverem danificados</li>
+                    <li><img src="../img/icones/check-verde-esc.svg" alt="" width="12" height="12"> Reembolso se o pacote for perdido</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- remessa -->
+        <section class="remessa">
+            <div class="remessa__transportadora">
+                <div>
+                    <p class="so-desktop">Frete expresso</p>
+                    <div class="remessa__codigo">
+                        <span>Número de rastreamento</span>
+                        <strong id="codigo-rastreio">NX-10482</strong>
+                    </div>
+                </div>
+                <button type="button" class="remessa__copiar" id="copiar-rastreio">
+                    <img src="../img/icones/copy-escuro.svg" alt="" width="15" height="15">
+                    Copiar
+                </button>
+            </div>
+
+            <div class="remessa__status so-desktop">
+                <div class="remessa__situacao">
+                    <h2 id="titulo-status">Em preparação</h2>
+                    <span class="selo selo--azul" id="selo-status"><span class="bolinha"></span>Preparando</span>
+                </div>
+                <p id="texto-status">Seu pacote está sendo preparado</p>
+                <small id="data-status">Dom., 13 de out., 08:37</small>
+            </div>
+
+            <div class="progresso">
+                <p class="so-desktop">Sendo preparado no país/região de origem</p>
+                <ol class="linha-tempo">
+                    <li class="feito">
+                        <span class="linha-tempo__icone"><img src="../img/icones/check-branco-16.svg" alt="" width="16" height="16"></span>
+                        <span class="so-desktop">Pedido recebido</span><span class="so-mobile">Recebido</span>
+                    </li>
+                    <li class="atual">
+                        <span class="linha-tempo__icone"><img src="../img/icones/package.svg" alt="" width="16" height="16"></span>
+                        <span class="so-desktop">Em preparação</span><span class="so-mobile">Preparo</span>
+                    </li>
+                    <li>
+                        <span class="linha-tempo__icone"><img src="../img/icones/send.svg" alt="" width="16" height="16"></span>
+                        Enviado
+                    </li>
+                    <li>
+                        <span class="linha-tempo__icone"><img src="../img/icones/truck-claro.svg" alt="" width="16" height="16"></span>
+                        A caminho
+                    </li>
+                    <li>
+                        <span class="linha-tempo__icone"><img src="../img/icones/home-claro.svg" alt="" width="16" height="16"></span>
+                        Entregue
+                    </li>
+                </ol>
+            </div>
+
+            <div class="historico" id="historico">
+                <h3 class="so-mobile">Histórico</h3>
+                <ul id="lista-historico"></ul>
+            </div>
+
+            <button type="button" class="remessa__mais" id="ver-mais-rastreio">
+                <span>Ver mais detalhes de rastreamento</span>
+                <img class="so-desktop" src="../img/icones/chevron-down-escuro.svg" alt="" width="14" height="14">
+                <img class="so-mobile" src="../img/icones/chev-r-azul-12.svg" alt="" width="16" height="16">
+            </button>
+        </section>
+
+        <!-- entrega protegida (mobile) -->
+        <section class="protegida so-mobile">
+            <h3><img src="../img/icones/shield-verde.svg" alt="" width="22" height="22"> Entrega protegida</h3>
+            <ul>
+                <li><img src="../img/icones/check-verde-esc.svg" alt="" width="16" height="16"> Entrega rápida</li>
+                <li><img src="../img/icones/check-verde-esc.svg" alt="" width="16" height="16"> Cupom de R$ 5,00 em caso de atraso</li>
+                <li><img src="../img/icones/check-verde-esc.svg" alt="" width="16" height="16"> Reembolso se não houver atualização em 20 dias</li>
+                <li><img src="../img/icones/check-verde-esc.svg" alt="" width="16" height="16"> Reembolso se os itens estiverem danificados</li>
+                <li><img src="../img/icones/check-verde-esc.svg" alt="" width="16" height="16"> Reembolso se o pacote for perdido</li>
+            </ul>
+        </section>
+
+        <!-- endereço -->
+        <section class="destino">
+            <span class="destino__icone"><img src="../img/icones/map-pin-escuro.svg" alt="" width="20" height="20"></span>
+            <div>
+                <strong>Endereço de entrega</strong>
+                <p id="endereco-rastreio">Bela Vista, Avenida Paulista, 1578, São Paulo, São Paulo, Brasil, 01310-100</p>
+            </div>
+            <span class="destino__telefone">+55 11 *****677</span>
+        </section>
+
+        <!-- itens -->
+        <section class="detalhes-pedido">
+            <h2>Detalhes do pedido</h2>
+            <div id="itens-rastreio"></div>
+        </section>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/pedido.js"></script>
+</body>
+</html>

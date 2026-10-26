@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/produto.css">
+    <title>TechBox | iPhone 17 Pro</title>
+</head>
+<body class="com-barra-fixa" data-pagina="smartphones" data-titulo="Smartphones" data-voltar="catalogo.html?categoria=smartphones">
+
+    <header id="cabecalho"></header>
+
+    <main class="container produto-pagina">
+        <nav class="trilha" aria-label="Você está em">
+            <a href="../index.html">Home</a>
+            <img src="../img/icones/chevron-right.svg" alt="" width="13" height="13">
+            <a href="catalogo.html?categoria=smartphones">Smartphones</a>
+            <img src="../img/icones/chevron-right.svg" alt="" width="13" height="13">
+            <strong>iPhone 17 Pro</strong>
+        </nav>
+
+        <div class="produto">
+            <!-- Galeria de fotos -->
+            <section class="galeria" aria-label="Fotos do produto">
+                <div class="galeria__miniaturas" id="miniaturas"></div>
+                <div class="galeria__principal">
+                    <img id="foto-principal" src="../img/produtos/iphone17/galeria-1.png" alt="iPhone 17 Pro Laranja Cósmico">
+                    <button class="galeria__ampliar so-desktop" type="button" id="btn-ampliar" aria-label="Ampliar foto">
+                        <img src="../img/icones/maximize.svg" alt="" width="18" height="18">
+                    </button>
+                    <button class="galeria__favoritar so-mobile" type="button" id="btn-favoritar" aria-label="Favoritar">
+                        <img src="../img/icones/heart-m.svg" alt="" width="18" height="18">
+                    </button>
+                    <span class="galeria__contador so-mobile" id="contador-fotos">1/5</span>
+                </div>
+            </section>
+
+            <!-- Informações de compra -->
+            <section class="produto__info">
+                <div class="produto__identificacao">
+                    <div class="produto__etiquetas">
+                        <span class="selo selo--verde so-desktop">Melhor preço em iPhones</span>
+                        <span class="selo-estoque so-mobile">EM ESTOQUE</span>
+                        <span class="vendidos so-mobile">+100 vendidos</span>
+                    </div>
+                    <h1>
+                        <span class="so-desktop">iPhone 17 Pro</span>
+                        <span class="so-mobile">iPhone 17 Pro 512 GB — <span class="js-nome-cor">Laranja Cósmico</span></span>
+                    </h1>
+                    <p class="produto__descricao so-desktop">O Smartphone mais tecnológico do mercado pode ser seu! Consulte nossas ofertas para garantir o melhor preço.</p>
+                    <div class="produto__avaliacao">
+                        <div class="estrelas so-desktop">
+                            <img src="../img/icones/star.svg" alt="" width="15" height="15">
+                            <img src="../img/icones/star.svg" alt="" width="15" height="15">
+                            <img src="../img/icones/star.svg" alt="" width="15" height="15">
+                            <img src="../img/icones/star.svg" alt="" width="15" height="15">
+                            <img src="../img/icones/star.svg" alt="" width="15" height="15">
+                        </div>
+                        <strong>4,8</strong>
+                        <div class="estrelas so-mobile">
+                            <img src="../img/icones/star-azul-cheia.svg" alt="" width="13" height="13">
+                            <img src="../img/icones/star-azul-cheia.svg" alt="" width="13" height="13">
+                            <img src="../img/icones/star-azul-cheia.svg" alt="" width="13" height="13">
+                            <img src="../img/icones/star-azul-cheia.svg" alt="" width="13" height="13">
+                            <img src="../img/icones/star-azul-cheia.svg" alt="" width="13" height="13">
+                        </div>
+                        <a href="#detalhes" class="js-ver-avaliacoes">(184 avaliações)</a>
+                    </div>
+                </div>
+
+                <hr class="divisor so-desktop">
+
+                <ul class="produto__destaques caixa-mobile">
+                    <li class="caixa-mobile__titulo so-mobile">O que você precisa saber</li>
+                    <li><span class="marcador"><img src="../img/icones/check-azul.svg" alt="" width="12" height="12"></span>12 GB de RAM</li>
+                    <li><span class="marcador"><img src="../img/icones/check-azul.svg" alt="" width="12" height="12"></span>Chip integrado e eSIM</li>
+                    <li><span class="marcador"><img src="../img/icones/check-azul.svg" alt="" width="12" height="12"></span>Proteção Ceramic Shield</li>
+                    <li><span class="marcador"><img src="../img/icones/check-azul.svg" alt="" width="12" height="12"></span>512 GB de armazenamento</li>
+                </ul>
+
+                <div class="produto__cor caixa-mobile">
+                    <p>Cor: <span class="js-nome-cor">Laranja Cósmico</span></p>
+                    <div class="cores" id="cores"></div>
+                </div>
+
+                <div class="produto__compra">
+                    <div class="compra__preco">
+                        <div>
+                            <s>R$ 11.499</s>
+                            <div class="compra__linha">
+                                <strong class="compra__valor">R$ 8.324<small class="so-desktop">,00</small></strong>
+                                <span class="selo selo--verde so-mobile">27% OFF NO PIX</span>
+                            </div>
+                            <span class="compra__parcelas">ou em 10x R$ 832,40 sem juros</span>
+                        </div>
+                        <span class="selo selo--verde so-desktop">27% OFF NO PIX</span>
+                    </div>
+                    <div class="compra__acoes so-desktop">
+                        <div class="quantidade quantidade--grande">
+                            <button type="button" class="js-menos" aria-label="Diminuir"><img src="../img/icones/minus.svg" alt="" width="14" height="14"></button>
+                            <span class="js-qtd">1</span>
+                            <button type="button" class="js-mais" aria-label="Aumentar"><img src="../img/icones/plus-escuro.svg" alt="" width="14" height="14"></button>
+                        </div>
+                        <button type="button" class="btn btn--primario js-adicionar-produto">
+                            <img src="../img/icones/bag-branca.svg" alt="" width="17" height="17">
+                            Adicionar ao carrinho
+                        </button>
+                    </div>
+                </div>
+
+                <p class="produto__entrega so-desktop">
+                    <img src="../img/icones/truck-cinza.svg" alt="" width="18" height="18">
+                    Entrega grátis para o Rio Grande do Sul • receba até 06 de outubro
+                </p>
+
+                <!-- cards que só existem no mobile -->
+                <div class="caixa-mobile entrega-mobile so-mobile">
+                    <div class="entrega-mobile__item">
+                        <span class="icone-quadrado verde"><img src="../img/icones/truck-verde.svg" alt="" width="20" height="20"></span>
+                        <div>
+                            <strong class="verde">Entrega grátis</strong>
+                            <p>Para o Rio Grande do Sul • receba até 06 de outubro</p>
+                        </div>
+                        <img src="../img/icones/chev-r-cinza.svg" alt="" width="18" height="18">
+                    </div>
+                    <hr class="divisor">
+                    <div class="entrega-mobile__item">
+                        <span class="icone-quadrado"><img src="../img/icones/shield.svg" alt="" width="20" height="20"></span>
+                        <div>
+                            <strong>Compra garantida</strong>
+                            <p>Receba o produto que está esperando ou devolvemos o dinheiro.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caixa-mobile quantidade-mobile so-mobile">
+                    <strong>Quantidade</strong>
+                    <div class="quantidade-mobile__seletor">
+                        <button type="button" class="js-menos" aria-label="Diminuir"><img src="../img/icones/minus-m.svg" alt="" width="16" height="16"></button>
+                        <span class="js-qtd">1</span>
+                        <button type="button" class="js-mais" aria-label="Aumentar"><img src="../img/icones/plus-m.svg" alt="" width="16" height="16"></button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Abas de detalhes -->
+        <section class="detalhes caixa" id="detalhes">
+            <div class="detalhes__abas" role="tablist">
+                <button type="button" class="ativa" data-aba="especificacoes" role="tab">Especificações</button>
+                <button type="button" data-aba="descricao" role="tab">Descrição</button>
+                <button type="button" data-aba="avaliacoes" role="tab">Avaliações (184)</button>
+            </div>
+
+            <div class="detalhes__painel" id="painel-especificacoes">
+                <div class="tabela" id="tabela-specs"></div>
+            </div>
+
+            <div class="detalhes__painel escondido" id="painel-descricao">
+                <div class="descricao-texto">
+                    <p>O iPhone 17 Pro chega com o novo chip A19 Pro, muito mais rápido e econômico, perfeito para jogos, fotos e edição de vídeos direto no celular.</p>
+                    <p>O corpo de alumínio é leve e resistente, e a tela tem proteção Ceramic Shield contra quedas e arranhões. São 512 GB de armazenamento para guardar tudo sem se preocupar.</p>
+                    <p>Na caixa: iPhone 17 Pro, cabo USB-C e documentação. Garantia de 1 ano com a TechBox.</p>
+                </div>
+            </div>
+
+            <div class="detalhes__painel escondido" id="painel-avaliacoes">
+                <div class="avaliacoes">
+                    <div class="avaliacoes__resumo">
+                        <strong>4,8</strong>
+                        <div class="estrelas">
+                            <img src="../img/icones/star.svg" alt="" width="15" height="15">
+                            <img src="../img/icones/star.svg" alt="" width="15" height="15">
+                            <img src="../img/icones/star.svg" alt="" width="15" height="15">
+                            <img src="../img/icones/star.svg" alt="" width="15" height="15">
+                            <img src="../img/icones/star.svg" alt="" width="15" height="15">
+                        </div>
+                        <span>184 avaliações</span>
+                    </div>
+                    <div class="avaliacoes__lista" id="lista-avaliacoes"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- barra de compra fixa no mobile -->
+    <div class="barra-fixa">
+        <button type="button" class="btn btn--contorno js-adicionar-produto">
+            <img src="../img/icones/cart-azul.svg" alt="" width="18" height="18">
+            Adicionar
+        </button>
+        <button type="button" class="btn btn--primario" id="comprar-agora">Comprar agora</button>
+    </div>
+
+    <!-- zoom da foto -->
+    <div class="modal modal-zoom" id="modal-zoom">
+        <div class="modal__caixa">
+            <button type="button" class="modal__fechar js-fechar" aria-label="Fechar">
+                <img src="../img/icones/x-cinza.svg" alt="" width="16" height="16">
+            </button>
+            <img id="foto-zoom" src="../img/produtos/iphone17/galeria-1.png" alt="Foto ampliada do iPhone 17 Pro">
+        </div>
+    </div>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/produto.js"></script>
+</body>
+</html>

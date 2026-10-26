@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
+    <title>TechBox | Carrinho</title>
+</head>
+<body class="com-abas" data-aba="carrinho" data-titulo="Carrinho">
+
+    <header id="cabecalho"></header>
+
+    <main class="container carrinho-pagina">
+        <h1 class="carrinho__titulo so-desktop">Seu carrinho</h1>
+
+        <div class="carrinho">
+            <section class="carrinho__itens">
+                <div id="lista-itens"></div>
+
+                <!-- carrinho vazio -->
+                <div class="vazio escondido" id="carrinho-vazio">
+                    <img class="vazio__ilustracao so-desktop" src="../img/carrinho-vazio.svg" alt="" width="106" height="80">
+                    <span class="vazio__circulo so-mobile"><img src="../img/icones/cart-grande.svg" alt="" width="48" height="48"></span>
+                    <div>
+                        <h2>Seu carrinho está vazio</h2>
+                        <p>Adicione produtos de um mesmo vendedor e consiga frete grátis.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- resumo do pedido -->
+            <aside class="resumo caixa caixa--sombra" id="resumo">
+                <h2 class="resumo__titulo">Resumo do pedido</h2>
+
+                <form class="cupom so-desktop" id="form-cupom">
+                    <div class="entrada">
+                        <input type="text" id="campo-cupom" placeholder="Cupom de desconto" aria-label="Cupom de desconto">
+                    </div>
+                    <button type="submit" class="cupom__aplicar">Aplicar</button>
+                </form>
+                <p class="cupom__mensagem so-desktop" id="mensagem-cupom"></p>
+
+                <hr class="divisor so-desktop">
+
+                <div class="resumo__valores">
+                    <div class="linha-valor">
+                        <span id="rotulo-subtotal">Subtotal</span>
+                        <strong id="valor-subtotal">R$ -</strong>
+                    </div>
+                    <div class="linha-valor" id="linha-desconto">
+                        <span>Desconto</span>
+                        <strong class="verde" id="valor-desconto">− R$ 0</strong>
+                    </div>
+                    <div class="linha-valor so-mobile" id="linha-entrega">
+                        <span>Entrega</span>
+                        <strong class="verde">Grátis</strong>
+                    </div>
+
+                    <!-- cálculo de frete -->
+                    <form class="frete so-desktop" id="form-frete">
+                        <div class="frete__topo">
+                            <span class="frete__icone"><img src="../img/icones/map-pin.svg" alt="" width="19" height="19"></span>
+                            <div>
+                                <strong>Calcule o prazo de entrega</strong>
+                                <p>Digite seu CEP para ver as melhores opções.</p>
+                            </div>
+                        </div>
+                        <div class="frete__campos">
+                            <div class="entrada">
+                                <input type="text" id="campo-cep" placeholder="00000-000" maxlength="9" inputmode="numeric" aria-label="CEP">
+                            </div>
+                            <button type="submit" class="btn btn--secundario">Calcular</button>
+                        </div>
+                        <p class="frete__resultado" id="resultado-frete"></p>
+                    </form>
+                </div>
+
+                <hr class="divisor">
+
+                <div class="resumo__total">
+                    <strong>Total</strong>
+                    <div>
+                        <span class="resumo__valor-total" id="valor-total">R$ -</span>
+                        <span class="resumo__parcelas" id="valor-parcelas"></span>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn--primario btn--bloco so-desktop js-finalizar">Finalizar compra</button>
+            </aside>
+        </div>
+
+        <!-- vitrine -->
+        <section class="explorar">
+            <h2 class="explorar__titulo" id="titulo-explorar">Explore...</h2>
+            <div class="grade-produtos lista-explorar so-desktop" id="explorar-desktop"></div>
+            <div class="carrossel so-mobile" id="explorar-mobile"></div>
+        </section>
+    </main>
+
+    <!-- barra fixa no mobile -->
+    <div class="barra-fixa escondido" id="barra-carrinho">
+        <div class="barra-fixa__total">
+            <span>Total</span>
+            <strong id="barra-total">R$ 0</strong>
+        </div>
+        <button type="button" class="btn btn--primario js-finalizar">
+            <img src="../img/icones/lock-branco-18.svg" alt="" width="18" height="18">
+            Finalizar compra
+        </button>
+    </div>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/carrinho.js"></script>
+</body>
+</html>

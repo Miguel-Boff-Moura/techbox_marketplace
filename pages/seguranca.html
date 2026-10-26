@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/conta.css">
+    <title>TechBox | Segurança</title>
+</head>
+<body class="com-abas" data-aba="conta" data-secao="seguranca" data-titulo="Segurança" data-voltar="minha-conta.html">
+
+    <header id="cabecalho"></header>
+
+    <main class="container conta-pagina">
+        <aside class="menu-conta" id="menu-conta"></aside>
+
+        <div class="conta__conteudo">
+            <nav class="conta__trilha">
+                <a href="minha-conta.html">Minha conta</a>
+                <img src="../img/icones/chevron-right.svg" alt="" width="13" height="13">
+                <strong>Segurança</strong>
+            </nav>
+
+            <div class="conta__titulo">
+                <h1>Segurança</h1>
+                <p>Proteja sua conta e controle onde você está conectado.</p>
+            </div>
+
+            <div class="aviso" id="aviso-seguranca">
+                <p>Você tem 2 configurações de segurança pendentes.</p>
+                <button type="button" class="js-fechar-aviso" aria-label="Fechar aviso"><img src="../img/icones/x-cinza.svg" alt="" width="16" height="16"></button>
+            </div>
+
+            <section class="secao-conta">
+                <div class="secao-conta__cabecalho">
+                    <div>
+                        <h2>Proteja sua conta</h2>
+                        <p>Ative as proteções abaixo para manter seus dados e compras seguros.</p>
+                    </div>
+                </div>
+
+                <div class="item-config">
+                    <span class="icone-caixa"><img src="../img/icones/lock-azul.svg" alt="" width="20" height="20"></span>
+                    <div class="item-config__texto">
+                        <strong>Senha</strong>
+                        <p>Última alteração há 8 meses.</p>
+                    </div>
+                    <button type="button" class="btn btn--secundario btn--pequeno" id="btn-senha">Alterar senha</button>
+                </div>
+
+                <div class="item-config">
+                    <span class="icone-caixa"><img src="../img/icones/mail-azul.svg" alt="" width="20" height="20"></span>
+                    <div class="item-config__texto">
+                        <div class="item-config__titulo"><strong>Validar e-mail</strong><span class="selo selo--laranja" id="selo-email">Pendente</span></div>
+                        <p>Confirme seu e-mail para poder recuperar a conta com segurança.</p>
+                    </div>
+                    <button type="button" class="btn btn--primario btn--pequeno" id="btn-validar">Validar</button>
+                </div>
+
+                <div class="item-config">
+                    <span class="icone-caixa"><img src="../img/icones/phone-azul.svg" alt="" width="20" height="20"></span>
+                    <div class="item-config__texto">
+                        <div class="item-config__titulo"><strong>Verificação em duas etapas</strong><span class="selo selo--laranja" id="selo-2fa">Pendente</span></div>
+                        <p>Adicione uma camada extra de proteção ao fazer login.</p>
+                    </div>
+                    <button type="button" class="btn btn--secundario btn--pequeno" id="btn-2fa">Ativar</button>
+                </div>
+
+                <div class="item-config">
+                    <span class="icone-caixa"><img src="../img/icones/monitor-azul.svg" alt="" width="20" height="20"></span>
+                    <div class="item-config__texto">
+                        <strong>Dispositivos conectados</strong>
+                        <p>2 dispositivos com sessão ativa.</p>
+                    </div>
+                    <button type="button" class="btn btn--secundario btn--pequeno" id="btn-dispositivos">Gerenciar</button>
+                </div>
+
+                <div class="item-config">
+                    <span class="icone-caixa"><img src="../img/icones/bell-azul.svg" alt="" width="20" height="20"></span>
+                    <div class="item-config__texto">
+                        <strong>Alertas de login</strong>
+                        <p>Avisamos por e-mail quando houver um acesso novo à sua conta.</p>
+                    </div>
+                    <label class="interruptor">
+                        <input type="checkbox" id="alertas-login" aria-label="Alertas de login">
+                        <span></span>
+                    </label>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/conta.js"></script>
+</body>
+</html>

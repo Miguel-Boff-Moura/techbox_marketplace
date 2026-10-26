@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/conta.css">
+    <title>TechBox | TechBox+</title>
+</head>
+<body class="com-abas" data-aba="conta" data-secao="techbox-plus" data-titulo="TechBox+" data-voltar="minha-conta.html">
+
+    <header id="cabecalho"></header>
+
+    <main class="container conta-pagina">
+        <aside class="menu-conta" id="menu-conta"></aside>
+
+        <div class="conta__conteudo">
+            <nav class="conta__trilha">
+                <a href="minha-conta.html">Minha conta</a>
+                <img src="../img/icones/chevron-right.svg" alt="" width="13" height="13">
+                <strong>TechBox+</strong>
+            </nav>
+
+            <div class="conta__titulo">
+                <h1>TechBox+</h1>
+                <p>Assinatura com benefícios em frete, compras e atendimento.</p>
+            </div>
+
+            <div class="banner-plus">
+                <div class="banner-plus__preco">
+                    <span class="banner-plus__logo">TechBox+</span>
+                    <div>
+                        <small>Por apenas</small>
+                        <strong>R$ 9,90</strong> <span class="mes">/mês</span>
+                    </div>
+                </div>
+                <button type="button" class="btn" id="assine-ja">Assine já</button>
+            </div>
+
+            <h2 class="planos-titulo">Escolha seu plano do TechBox+</h2>
+
+            <div class="planos">
+                <article class="plano" data-plano="essencial" data-preco="R$ 9,90">
+                    <div>
+                        <h3>Plano Essencial</h3>
+                        <span class="plano__a-partir"></span>
+                        <p class="plano__preco"><strong>R$ 9,90</strong><span>/mês</span></p>
+                    </div>
+                    <hr class="divisor">
+                    <p class="plano__frase">Economize em todas as suas compras</p>
+                    <ul>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">Frete grátis rápido em compras acima de R$ 299.</li>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">Até 5% de cashback em acessórios.</li>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">Milhares de descontos exclusivos na TechBox.</li>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">1 cupom de R$ 30 por mês.</li>
+                    </ul>
+                    <button type="button" class="btn btn--primario">Assinar por R$ 9,90</button>
+                </article>
+
+                <article class="plano plano--destaque" data-plano="total" data-preco="R$ 19,90">
+                    <div>
+                        <h3>Plano Total</h3>
+                        <span class="plano__a-partir">A partir de</span>
+                        <p class="plano__preco"><strong>R$ 34,90</strong><span>/mês</span></p>
+                    </div>
+                    <hr class="divisor">
+                    <p class="plano__frase">Você ganha garantia estendida e economiza nas compras</p>
+                    <ul>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11"><strong>Garantia extendida em todos os produtos da loja</strong></li>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">Frete grátis rápido em compras acima de R$ 299.</li>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">Até 5% de cashback em acessórios.</li>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">Milhares de descontos exclusivos na TechBox.</li>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">Troca facilitada em até 30 dias.</li>
+                    </ul>
+                    <button type="button" class="btn">Assinar por R$ 19,90</button>
+                </article>
+
+                <article class="plano" data-plano="mega" data-preco="R$ 74,90">
+                    <div>
+                        <h3>Plano Mega</h3>
+                        <span class="plano__a-partir">A partir de</span>
+                        <p class="plano__preco"><strong>R$ 74,90</strong><span>/mês</span></p>
+                    </div>
+                    <hr class="divisor">
+                    <p class="plano__frase">Você aproveita todos os benefícios e economiza ainda mais</p>
+                    <ul>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">Frete grátis rápido em compras acima de R$ 299.</li>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">Até 10% de cashback em toda a loja.</li>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">Milhares de descontos exclusivos na TechBox.</li>
+                        <li><img src="../img/icones/marcador.svg" alt="" width="4" height="11">Suporte técnico prioritário por chat e telefone.</li>
+                    </ul>
+                    <button type="button" class="btn btn--primario">Assinar por R$ 74,90</button>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/conta.js"></script>
+</body>
+</html>

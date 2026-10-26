@@ -3,10 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechBox - notebooks e smartphones com entrega rápida e parcelamento sem juros.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png">
     <link rel="stylesheet" href="css/style.css">
-    <title>TechBox</title>
+    <link rel="stylesheet" href="css/home.css">
+    <title>TechBox | Home</title>
 </head>
-<body>
+<body class="com-abas rodape-mobile" data-pagina="home" data-aba="inicio" data-cabecalho="home">
+
+    <header id="cabecalho"></header>
+
+    <main>
+        <!-- Banner principal -->
+        <section class="hero">
+            <div class="hero__conteudo">
+                <div class="hero__texto">
+                    <span class="hero__etiqueta so-mobile">NOVIDADE NA TECHBOX</span>
+                    <h1>
+                        <span class="so-desktop">O novo ACER Nitro v16 na TechBox! Confira as novidades</span>
+                        <span class="so-mobile">O novo Acer Nitro V16 chegou</span>
+                    </h1>
+                    <p>
+                        <span class="so-desktop">Suba de nível com a força bruta do Acer Nitro V16: o setup definitivo para a sua vitória.</span>
+                        <span class="so-mobile">Suba de nível com a força bruta do Nitro V16: o setup definitivo para a sua vitória.</span>
+                    </p>
+                    <div class="hero__botoes">
+                        <a class="btn hero__btn-roxo" href="pages/catalogo.html?categoria=notebooks">
+                            Explorar notebooks
+                            <img src="img/icones/arrow-right-white.svg" alt="" width="16" height="16">
+                        </a>
+                        <a class="btn hero__btn-vazado so-desktop" href="pages/catalogo.html?ofertas=1">Ver ofertas</a>
+                    </div>
+                </div>
+                <picture class="hero__imagem">
+                    <source media="(max-width: 768px)" srcset="img/banners/nitro-mobile.png">
+                    <img src="img/banners/hero-nitro.png" alt="Notebook Acer Nitro V16 aberto e fechado">
+                </picture>
+            </div>
+        </section>
+
+        <!-- Categorias (só no mobile) -->
+        <nav class="categorias so-mobile" aria-label="Categorias">
+            <a href="pages/catalogo.html?categoria=notebooks">
+                <span><img src="img/icones/laptop.svg" alt="" width="24" height="24"></span>
+                Notebooks
+            </a>
+            <a href="pages/catalogo.html?categoria=smartphones">
+                <span><img src="img/icones/phone.svg" alt="" width="24" height="24"></span>
+                Celulares
+            </a>
+            <a href="pages/catalogo.html?ofertas=1">
+                <span><img src="img/icones/tag.svg" alt="" width="24" height="24"></span>
+                Ofertas
+            </a>
+            <a href="#" class="js-em-breve">
+                <span><img src="img/icones/headphones.svg" alt="" width="24" height="24"></span>
+                Acessórios
+            </a>
+            <a href="pages/techbox-plus.html">
+                <span><img src="img/icones/star-outline.svg" alt="" width="24" height="24"></span>
+                TechBox+
+            </a>
+        </nav>
+
+        <!-- Faixa TechBox+ (só no mobile) -->
+        <div class="faixa-plus so-mobile">
+            <div>
+                <strong>TechBox+</strong>
+                <p>Frete grátis rápido, cashback e cupons por R$ 9,90/mês.</p>
+            </div>
+            <a href="pages/techbox-plus.html">Assinar</a>
+        </div>
+
+        <!-- Ofertas do dia (só no mobile) -->
+        <section class="ofertas so-mobile">
+            <div class="secao-mobile__titulo">
+                <h2>Ofertas do dia</h2>
+                <a href="pages/catalogo.html?ofertas=1">Ver tudo</a>
+            </div>
+            <div class="carrossel" id="carrossel-ofertas"></div>
+        </section>
+
+        <!-- Produtos em destaque -->
+        <section class="destaques container">
+            <div class="destaques__cabecalho">
+                <div>
+                    <span class="destaques__sobretitulo">
+                        <span class="so-desktop">Explore os favoritos da techbox</span>
+                        <span class="so-mobile">EXPLORE OS FAVORITOS</span>
+                    </span>
+                    <h2>Tecnologia que te acompanha</h2>
+                </div>
+                <a class="destaques__link so-desktop" href="pages/catalogo.html">
+                    Ver catálogo completo
+                    <img src="img/icones/arrow-right.svg" alt="" width="16" height="16">
+                </a>
+            </div>
+
+            <div class="grade-produtos" id="grade-destaques"></div>
+
+            <a class="btn btn--contorno btn--bloco destaques__ver-tudo so-mobile" href="pages/catalogo.html">Ver catálogo completo</a>
+        </section>
+
+        <!-- Benefícios (só no mobile) -->
+        <section class="beneficios so-mobile">
+            <div class="beneficio">
+                <span><img src="img/icones/truck.svg" alt="" width="20" height="20"></span>
+                <div>
+                    <strong>Entrega rápida</strong>
+                    <p>Frete grátis em compras acima de R$ 299.</p>
+                </div>
+            </div>
+            <div class="beneficio">
+                <span><img src="img/icones/shield.svg" alt="" width="20" height="20"></span>
+                <div>
+                    <strong>Compra protegida</strong>
+                    <p>Receba o produto ou o seu dinheiro de volta.</p>
+                </div>
+            </div>
+            <div class="beneficio">
+                <span><img src="img/icones/card.svg" alt="" width="20" height="20"></span>
+                <div>
+                    <strong>Até 12x sem juros</strong>
+                    <p>Parcele no cartão ou pague no Pix com desconto.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="js/produtos.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>

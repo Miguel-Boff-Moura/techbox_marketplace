@@ -1,0 +1,270 @@
+/* =========================================================
+   LOGIN, CADASTRO e RECUPERAR SENHA
+   ========================================================= */
+
+.auth {
+    max-width: 1230px;
+    padding-top: 42px;
+    padding-bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+}
+
+.auth .trilha {
+    width: 100%;
+    height: 22px;
+    color: var(--texto-2);
+}
+
+.auth__painel {
+    width: 100%;
+    max-width: 614px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    box-shadow: var(--sombra);
+}
+
+.auth__painel--pequeno {
+    max-width: 476px;
+}
+
+.auth__form {
+    padding: 36px 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.auth__painel--pequeno .auth__form {
+    padding: 36px 40px;
+}
+
+.auth__apresentacao {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.auth__apresentacao h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.auth__apresentacao p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--texto-2);
+}
+
+.auth__campos {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.auth .campo {
+    gap: 8px;
+}
+
+.auth .campo > label {
+    font-size: 13px;
+}
+
+.auth .campo > label.rotulo-forte {
+    font-weight: 600;
+    color: var(--texto);
+}
+
+.auth .entrada {
+    height: 48px;
+    padding: 0 14px;
+    gap: 10px;
+}
+
+.auth .entrada input {
+    font-size: 14px;
+}
+
+.auth__opcoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth__opcoes .caixa-selecao input {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.auth__enviar {
+    font-size: 14px;
+}
+
+.auth__rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.auth__rodape p {
+    font-size: 13px;
+    color: var(--texto-2);
+}
+
+.auth__rodape .link {
+    font-size: 13px;
+    margin-left: 6px;
+}
+
+.auth__voltar {
+    align-self: center;
+    font-size: 13px;
+}
+
+.auth__sucesso {
+    align-items: center;
+    text-align: center;
+}
+
+.auth__sucesso-icone {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth__sucesso h1 {
+    font-size: 24px;
+}
+
+.auth__sucesso p {
+    font-size: 14px;
+    color: var(--texto-2);
+    line-height: 1.5;
+}
+
+/* ---------- mobile e tablet ---------- */
+@media (max-width: 768px) {
+    body {
+        background: var(--branco);
+    }
+
+    .cabecalho {
+        border-bottom: none;
+    }
+
+    .auth {
+        padding: 0 24px 32px;
+        gap: 0;
+    }
+
+    .auth__painel {
+        max-width: 480px;
+        border: none;
+        box-shadow: none;
+    }
+
+    .auth__form,
+    .auth__painel--pequeno .auth__form {
+        padding: 8px 0 0;
+        gap: 16px;
+    }
+
+    .auth__marca {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    #form-login .auth__apresentacao {
+        text-align: center;
+        margin-top: 4px;
+    }
+
+    .auth__apresentacao h1 {
+        font-size: 24px;
+    }
+
+    .auth__campos {
+        gap: 16px;
+    }
+
+    .auth .entrada {
+        height: 48px;
+        border-color: var(--borda);
+        border-radius: 12px;
+    }
+
+    .auth .entrada input {
+        font-size: 15px;
+    }
+
+    .auth .campo > label {
+        font-size: 13px;
+    }
+
+    .auth__opcoes .caixa-selecao {
+        font-size: 14px;
+        color: var(--texto);
+    }
+
+    .auth__opcoes .caixa-selecao input {
+        width: 20px;
+        height: 20px;
+    }
+
+    .auth__opcoes .link {
+        font-size: 14px;
+    }
+
+    .auth__enviar,
+    .auth__rodape .btn {
+        height: 50px;
+        border-radius: 12px;
+        font-size: 15px;
+    }
+
+    .auth__rodape {
+        gap: 20px;
+    }
+
+    .auth__ou {
+        display: flex !important;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        font-size: 12px;
+        color: var(--texto-3);
+    }
+
+    .auth__ou::before,
+    .auth__ou::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: var(--borda);
+    }
+
+    .auth__rodape .btn {
+        display: flex !important;
+        margin: 0;
+    }
+
+    .auth__seguro {
+        display: flex !important;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px !important;
+    }
+}

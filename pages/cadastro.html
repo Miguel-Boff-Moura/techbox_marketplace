@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <title>TechBox | Criar conta</title>
+</head>
+<body data-titulo="Criar conta" data-voltar="login.html">
+
+    <header id="cabecalho"></header>
+
+    <main class="container auth">
+        <nav class="trilha" aria-label="Você está em">
+            <a href="../index.html">Home</a>
+            <img src="../img/icones/chevron-right.svg" alt="" width="13" height="13">
+            <strong>Criar Conta</strong>
+        </nav>
+
+        <section class="auth__painel">
+            <form class="auth__form" id="form-cadastro" novalidate>
+                <div class="auth__apresentacao">
+                    <h1>Que bom ter você com a gente!</h1>
+                    <p>Crie na sua conta para continuar.</p>
+                </div>
+
+                <div class="auth__campos">
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <div class="entrada">
+                            <input id="nome" type="text" placeholder="Digite seu nome" autocomplete="name">
+                        </div>
+                        <span class="mensagem-erro">Digite nome e sobrenome.</span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <div class="entrada">
+                            <img src="../img/icones/mail-campo.svg" alt="" width="18" height="18">
+                            <input id="email" type="email" placeholder="Digite seu e-mail" autocomplete="email">
+                        </div>
+                        <span class="mensagem-erro" id="erro-email">Digite um e-mail válido.</span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cpf">CPF</label>
+                        <div class="entrada">
+                            <input id="cpf" type="text" inputmode="numeric" maxlength="14" placeholder="Digite seu CPF">
+                        </div>
+                        <span class="mensagem-erro">O CPF precisa ter 11 números.</span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+                        <div class="entrada">
+                            <img src="../img/icones/lock-campo.svg" alt="" width="18" height="18">
+                            <input id="senha" type="password" placeholder="Digite sua senha" autocomplete="new-password">
+                            <button type="button" class="btn-olho js-olho" aria-label="Mostrar senha">
+                                <img src="../img/icones/eye.svg" alt="" width="18" height="18">
+                            </button>
+                        </div>
+                        <span class="mensagem-erro">A senha precisa ter pelo menos 6 caracteres.</span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="confirmar">Confirme sua Senha</label>
+                        <div class="entrada">
+                            <img src="../img/icones/lock-campo.svg" alt="" width="18" height="18">
+                            <input id="confirmar" type="password" placeholder="Digite sua senha" autocomplete="new-password">
+                            <button type="button" class="btn-olho js-olho" aria-label="Mostrar senha">
+                                <img src="../img/icones/eye.svg" alt="" width="18" height="18">
+                            </button>
+                        </div>
+                        <span class="mensagem-erro">As senhas não são iguais.</span>
+                    </div>
+
+                    <div class="auth__opcoes">
+                        <label class="caixa-selecao">
+                            <input type="checkbox" id="lembrar" checked>
+                            Lembrar meu acesso
+                        </label>
+                        <a href="login.html" class="link js-link-login">Já tenho conta</a>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn--primario btn--bloco auth__enviar">
+                    Criar conta
+                    <img class="so-desktop" src="../img/icones/arrow-right-white.svg" alt="" width="16" height="16">
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

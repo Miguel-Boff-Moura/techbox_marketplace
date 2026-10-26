@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <title>TechBox | Pague com Pix</title>
+</head>
+<body data-titulo="Pagar com Pix" data-voltar="checkout.html">
+
+    <header id="cabecalho"></header>
+
+    <main class="container checkout-pagina">
+        <div class="checkout__cabecalho">
+            <div class="so-desktop">
+                <h1>Pague com Pix</h1>
+                <p>Escaneie o QR Code com o app do seu banco para concluir o pedido.</p>
+            </div>
+            <div class="etapas">
+                <div class="etapa etapa--feita"><span class="etapa__numero"><img src="../img/icones/check-verde.svg" alt="" width="13" height="13"></span>Carrinho</div>
+                <span class="etapas__linha etapas__linha--feita"></span>
+                <div class="etapa etapa--feita"><span class="etapa__numero"><img src="../img/icones/check-verde.svg" alt="" width="13" height="13"></span>Checkout</div>
+                <span class="etapas__linha etapas__linha--feita"></span>
+                <div class="etapa etapa--atual"><span class="etapa__numero">3</span>Pagamento</div>
+                <span class="etapas__linha"></span>
+                <div class="etapa"><span class="etapa__numero">4</span>Confirmação</div>
+            </div>
+        </div>
+
+        <div class="pix">
+            <section class="pix__caixa">
+                <div class="pix__topo">
+                    <div class="pix__qr">
+                        <img src="../img/qr-code-pix.svg" alt="QR Code do Pix" width="232" height="232">
+                    </div>
+                    <div class="pix__dados">
+                        <div class="pix__status">
+                            <span class="selo selo--laranja" id="status-pix">Aguardando pagamento</span>
+                            <span id="tempo-pix">Expira em 30:00</span>
+                        </div>
+                        <div class="pix__valor">
+                            <span>Valor a pagar</span>
+                            <strong id="valor-pix">R$ 0,00</strong>
+                        </div>
+                        <p class="pix__instrucao">Abra o app do seu banco, escolha Pix e leia o QR Code ao lado — ou copie o código abaixo.</p>
+                        <div class="pix__codigo">
+                            <label for="codigo-pix">Pix copia e cola</label>
+                            <input type="text" id="codigo-pix" readonly value="00020101021226480014br.gov.bcb.pix0126pagamentos@techbox.example520400005303986540814900.005802BR5918TECHBOX TECNOLOGIA6009SAO PAULO62110507NX1048263046626">
+                        </div>
+                        <button type="button" class="btn btn--primario btn--bloco pix__copiar" id="copiar-pix">
+                            <img src="../img/icones/copy.svg" alt="" width="16" height="16">
+                            <span class="so-desktop">Copiar código</span>
+                            <span class="so-mobile">Copiar código Pix</span>
+                        </button>
+                        <button type="button" class="pix__conferir js-paguei">Conferir Pagamento</button>
+                    </div>
+                </div>
+
+                <hr class="divisor so-desktop">
+
+                <div class="pix__passos">
+                    <h3>Como pagar com Pix</h3>
+                    <div class="passos">
+                        <div class="passo">
+                            <span class="passo__numero">1</span>
+                            <div>
+                                <strong>Abra o app do seu banco</strong>
+                                <p>Acesse a área Pix e escolha pagar com QR Code.</p>
+                            </div>
+                        </div>
+                        <div class="passo">
+                            <span class="passo__numero">2</span>
+                            <div>
+                                <strong>Escaneie ou cole o código</strong>
+                                <p>Aponte a câmera para o QR Code ou use o Pix copia e cola.</p>
+                            </div>
+                        </div>
+                        <div class="passo">
+                            <span class="passo__numero">3</span>
+                            <div>
+                                <strong>Confirme o pagamento</strong>
+                                <p>Confira o valor de <span class="js-valor-pix">R$ 0,00</span> para TechBox e finalize.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pix__rodape">
+                    <a class="btn btn--secundario" href="checkout.html">Escolher outra forma de pagamento</a>
+                    <p>Exemplo de QR Code para fins de design. Não realiza pagamentos reais.</p>
+                </div>
+            </section>
+
+            <aside class="resumo-checkout caixa caixa--sombra so-desktop">
+                <div class="resumo-checkout__topo">
+                    <h2>Seu pedido</h2>
+                </div>
+                <div id="itens-pedido"></div>
+                <hr class="divisor">
+                <div class="resumo-checkout__linhas">
+                    <div class="linha-valor"><span>Subtotal</span><strong id="pix-subtotal">R$ 0,00</strong></div>
+                    <div class="linha-valor"><span id="pix-nome-entrega">Entrega expressa</span><strong id="pix-entrega" class="verde">Grátis</strong></div>
+                </div>
+                <hr class="divisor">
+                <div class="resumo-checkout__total">
+                    <strong>Total</strong>
+                    <div><span id="pix-total">R$ 0</span></div>
+                </div>
+                <button type="button" class="btn btn--primario btn--bloco js-paguei">Já fiz o pagamento</button>
+                <p class="resumo-checkout__termos">Seu pedido é confirmado automaticamente assim que o Pix for identificado.</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/pix.js"></script>
+</body>
+</html>

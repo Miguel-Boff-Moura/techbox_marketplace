@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <title>TechBox | Finalizar compra</title>
+</head>
+<body class="com-barra-fixa" data-titulo="Finalizar compra" data-voltar="carrinho.html">
+
+    <header id="cabecalho"></header>
+
+    <main class="container checkout-pagina">
+        <div class="checkout__cabecalho">
+            <div class="so-desktop">
+                <h1>Finalizar compra</h1>
+                <p>Revise os dados para concluir seu pedido.</p>
+            </div>
+            <div class="etapas">
+                <div class="etapa etapa--feita"><span class="etapa__numero"><img src="../img/icones/check-verde.svg" alt="" width="13" height="13"></span>Carrinho</div>
+                <span class="etapas__linha etapas__linha--feita"></span>
+                <div class="etapa etapa--atual"><span class="etapa__numero">2</span>Checkout</div>
+                <span class="etapas__linha"></span>
+                <div class="etapa so-mobile"><span class="etapa__numero">3</span>Pagamento</div>
+                <div class="etapa"><span class="etapa__numero"><span class="so-desktop">3</span><span class="so-mobile">4</span></span>Confirmação</div>
+            </div>
+        </div>
+
+        <form class="checkout" id="form-checkout" novalidate>
+            <div class="checkout__formulario">
+                <!-- endereço -->
+                <section class="secao-checkout">
+                    <h2><span class="numero-secao so-mobile">1</span>Endereço de entrega</h2>
+
+                    <div class="endereco-resumo so-mobile" id="endereco-resumo">
+                        <img src="../img/icones/pin-azul-m.svg" alt="" width="20" height="20">
+                        <div>
+                            <strong id="resumo-nome">Neymar Santos</strong>
+                            <p id="resumo-linha1"></p>
+                            <p id="resumo-linha2"></p>
+                        </div>
+                        <button type="button" class="link" id="alterar-endereco">Alterar</button>
+                    </div>
+
+                    <div class="campos-endereco" id="campos-endereco">
+                        <div class="linha-campos">
+                            <div class="campo cresce">
+                                <label for="nome">Nome completo</label>
+                                <div class="entrada"><input id="nome" name="nome" type="text" autocomplete="name" required></div>
+                                <span class="mensagem-erro">Digite seu nome completo.</span>
+                            </div>
+                            <div class="campo largura-220">
+                                <label for="cpf">CPF</label>
+                                <div class="entrada"><input id="cpf" name="cpf" type="text" inputmode="numeric" maxlength="14" placeholder="000.000.000-00" required></div>
+                                <span class="mensagem-erro">CPF precisa ter 11 números.</span>
+                            </div>
+                        </div>
+                        <div class="linha-campos">
+                            <div class="campo largura-150">
+                                <label for="cep">CEP</label>
+                                <div class="entrada"><input id="cep" name="cep" type="text" inputmode="numeric" maxlength="9" placeholder="00000-000" required></div>
+                                <span class="mensagem-erro">CEP inválido.</span>
+                            </div>
+                            <div class="campo cresce">
+                                <label for="rua">Endereço</label>
+                                <div class="entrada"><input id="rua" name="rua" type="text" autocomplete="address-line1" required></div>
+                                <span class="mensagem-erro">Digite o endereço.</span>
+                            </div>
+                            <div class="campo largura-110">
+                                <label for="numero">Número</label>
+                                <div class="entrada"><input id="numero" name="numero" type="text" required></div>
+                                <span class="mensagem-erro">Obrigatório.</span>
+                            </div>
+                        </div>
+                        <div class="linha-campos">
+                            <div class="campo largura-180">
+                                <label for="complemento">Complemento</label>
+                                <div class="entrada"><input id="complemento" name="complemento" type="text"></div>
+                            </div>
+                            <div class="campo cresce">
+                                <label for="bairro">Bairro</label>
+                                <div class="entrada"><input id="bairro" name="bairro" type="text" required></div>
+                                <span class="mensagem-erro">Digite o bairro.</span>
+                            </div>
+                            <div class="campo largura-210">
+                                <label for="cidade">Cidade / UF</label>
+                                <div class="entrada"><input id="cidade" name="cidade" type="text" required></div>
+                                <span class="mensagem-erro">Digite a cidade.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- entrega -->
+                <section class="secao-checkout">
+                    <h2><span class="numero-secao so-mobile">2</span>Opção de entrega</h2>
+                    <div class="opcoes-entrega">
+                        <label class="opcao-entrega">
+                            <input type="radio" name="entrega" value="expressa" checked>
+                            <span class="opcao-entrega__radio"></span>
+                            <span class="opcao-entrega__texto">
+                                <strong>Entrega expressa</strong>
+                                <span><span class="so-mobile">Chega amanhã, </span><span class="so-desktop">Amanhã, </span><span class="js-data-amanha">02 de outubro</span></span>
+                            </span>
+                            <span class="opcao-entrega__preco verde">Grátis</span>
+                        </label>
+                        <label class="opcao-entrega">
+                            <input type="radio" name="entrega" value="agendada">
+                            <span class="opcao-entrega__radio"></span>
+                            <span class="opcao-entrega__texto">
+                                <strong>Entrega agendada</strong>
+                                <span>Escolha data e período</span>
+                            </span>
+                            <span class="opcao-entrega__preco">R$ 24,90</span>
+                        </label>
+                    </div>
+                    <div class="campo agendamento escondido" id="agendamento">
+                        <label for="data-entrega">Data da entrega</label>
+                        <div class="entrada"><input id="data-entrega" type="date"></div>
+                    </div>
+                </section>
+
+                <!-- pagamento -->
+                <section class="secao-checkout">
+                    <h2><span class="numero-secao so-mobile">3</span>Pagamento</h2>
+                    <div class="metodos" role="radiogroup">
+                        <label class="metodo">
+                            <input type="radio" name="pagamento" value="cartao" checked>
+                            <img class="metodo__icone-ativo" src="../img/icones/cartao-azul.svg" alt="" width="16" height="16">
+                            <img class="metodo__icone" src="../img/icones/cartao-cinza.svg" alt="" width="16" height="16">
+                            Cartão de crédito
+                        </label>
+                        <label class="metodo">
+                            <input type="radio" name="pagamento" value="pix">
+                            <img class="so-desktop" src="../img/pix.png" alt="" width="25" height="25">
+                            <img class="so-mobile" src="../img/icones/diamond.svg" alt="" width="16" height="16">
+                            Pix
+                        </label>
+                    </div>
+
+                    <div class="dados-cartao" id="dados-cartao">
+                        <div class="campo">
+                            <label for="numero-cartao">Número do cartão</label>
+                            <div class="entrada">
+                                <img src="../img/icones/card.svg" alt="" width="16" height="16">
+                                <input id="numero-cartao" type="text" inputmode="numeric" maxlength="19" placeholder="0000 0000 0000 0000" autocomplete="cc-number">
+                            </div>
+                            <span class="mensagem-erro">O cartão precisa ter 16 números.</span>
+                        </div>
+                        <div class="linha-campos">
+                            <div class="campo cresce">
+                                <label for="nome-cartao">Nome impresso</label>
+                                <div class="entrada"><input id="nome-cartao" type="text" autocomplete="cc-name"></div>
+                                <span class="mensagem-erro">Digite o nome do cartão.</span>
+                            </div>
+                            <div class="campo largura-130">
+                                <label for="validade">Validade</label>
+                                <div class="entrada"><input id="validade" type="text" inputmode="numeric" maxlength="5" placeholder="MM/AA" autocomplete="cc-exp"></div>
+                                <span class="mensagem-erro">Use MM/AA.</span>
+                            </div>
+                            <div class="campo largura-110">
+                                <label for="cvv">CVV</label>
+                                <div class="entrada"><input id="cvv" type="password" inputmode="numeric" maxlength="3" placeholder="•••" autocomplete="cc-csc"></div>
+                                <span class="mensagem-erro">3 números.</span>
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="parcelas" class="so-mobile">Parcelas</label>
+                            <div class="entrada entrada--select">
+                                <select id="parcelas" aria-label="Parcelas"></select>
+                                <img src="../img/icones/chevron-down.svg" alt="" width="15" height="15">
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="aviso-pix escondido" id="aviso-pix">O QR Code do Pix aparece na próxima tela. O pagamento é confirmado na hora.</p>
+                </section>
+            </div>
+
+            <!-- resumo -->
+            <aside class="resumo-checkout caixa caixa--sombra">
+                <div class="resumo-checkout__topo">
+                    <h2>Seu pedido</h2>
+                    <a href="carrinho.html" class="link so-desktop">Editar</a>
+                </div>
+                <div id="itens-pedido"></div>
+                <hr class="divisor">
+                <div class="resumo-checkout__linhas">
+                    <div class="linha-valor"><span>Subtotal</span><strong id="ck-subtotal">R$ 0,00</strong></div>
+                    <div class="linha-valor escondido" id="ck-linha-cupom"><span>Cupom</span><strong class="verde" id="ck-cupom"></strong></div>
+                    <div class="linha-valor"><span id="ck-nome-entrega">Entrega expressa</span><strong id="ck-entrega" class="verde">Grátis</strong></div>
+                </div>
+                <hr class="divisor">
+                <div class="resumo-checkout__total">
+                    <strong>Total</strong>
+                    <div>
+                        <span id="ck-total">R$ 0</span>
+                        <small id="ck-parcelas"></small>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn--primario btn--bloco so-desktop">
+                    <img src="../img/icones/lock.svg" alt="" width="15" height="15">
+                    Finalizar pedido
+                </button>
+                <p class="resumo-checkout__termos">
+                    <img class="so-mobile" src="../img/icones/lock-cinza-14.svg" alt="" width="14" height="14">
+                    Ao finalizar, você concorda com os Termos de Compra e Política de Privacidade.
+                </p>
+            </aside>
+        </form>
+    </main>
+
+    <div class="barra-fixa">
+        <div class="barra-fixa__total">
+            <span>Total</span>
+            <strong id="barra-total">R$ 0</strong>
+        </div>
+        <button type="submit" form="form-checkout" class="btn btn--primario">
+            <img src="../img/icones/lock-branco-18.svg" alt="" width="18" height="18">
+            Finalizar pedido
+        </button>
+    </div>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

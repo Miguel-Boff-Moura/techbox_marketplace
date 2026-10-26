@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/conta.css">
+    <title>TechBox | Informações do perfil</title>
+</head>
+<body class="com-acoes-fixas" data-secao="perfil" data-titulo="Informações do perfil" data-voltar="minha-conta.html">
+
+    <header id="cabecalho"></header>
+
+    <main class="container conta-pagina">
+        <aside class="menu-conta" id="menu-conta"></aside>
+
+        <form class="conta__conteudo" id="form-perfil" novalidate>
+            <nav class="conta__trilha">
+                <a href="minha-conta.html">Minha conta</a>
+                <img src="../img/icones/chevron-right.svg" alt="" width="13" height="13">
+                <strong>Informações do seu perfil</strong>
+            </nav>
+
+            <div class="conta__titulo">
+                <h1>Informações do seu perfil</h1>
+                <p>Atualize seus dados pessoais e de contato. Eles aparecem nos seus pedidos e notas fiscais.</p>
+            </div>
+
+            <!-- foto (no mobile vira um card separado) -->
+            <div class="foto-perfil secao-conta so-mobile">
+                <img src="../img/avatar.png" alt="Foto de perfil" class="js-foto">
+                <div><strong>Foto de perfil</strong></div>
+                <button type="button" class="js-alterar-foto-mobile">Alterar foto</button>
+            </div>
+
+            <section class="secao-conta secao-conta--espacada">
+                <div class="secao-conta__cabecalho">
+                    <div>
+                        <h2>Dados pessoais</h2>
+                        <p class="so-desktop">Use o nome que consta no seu documento.</p>
+                    </div>
+                </div>
+
+                <div class="foto-perfil so-desktop">
+                    <img src="../img/avatar.png" alt="Foto de perfil" id="foto-perfil">
+                    <div>
+                        <strong>Foto de perfil</strong>
+                        <p>JPG ou PNG, até 5 MB.</p>
+                    </div>
+                    <button type="button" class="btn btn--secundario btn--pequeno js-alterar-foto">
+                        <img src="../img/icones/pencil.svg" alt="" width="15" height="15">
+                        Alterar foto
+                    </button>
+                    <input type="file" id="campo-foto" accept="image/png, image/jpeg" hidden>
+                </div>
+
+                <hr class="divisor so-desktop">
+
+                <div class="campos-duplos">
+                    <div class="campo">
+                        <label for="perfil-nome">Nome</label>
+                        <div class="entrada"><input id="perfil-nome" type="text" autocomplete="given-name"></div>
+                        <span class="mensagem-erro">Digite seu nome.</span>
+                    </div>
+                    <div class="campo">
+                        <label for="perfil-sobrenome">Sobrenome</label>
+                        <div class="entrada"><input id="perfil-sobrenome" type="text" autocomplete="family-name"></div>
+                        <span class="mensagem-erro">Digite seu sobrenome.</span>
+                    </div>
+                    <div class="campo">
+                        <label for="perfil-cpf">CPF</label>
+                        <div class="entrada">
+                            <img class="so-desktop" src="../img/icones/idcard-cinza.svg" alt="" width="16" height="16">
+                            <input id="perfil-cpf" type="text" readonly>
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="perfil-nascimento">Data de nascimento</label>
+                        <div class="entrada"><input id="perfil-nascimento" type="text" placeholder="DD/MM/AAAA" maxlength="10"></div>
+                        <span class="mensagem-erro">Use o formato DD/MM/AAAA.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="secao-conta secao-conta--espacada">
+                <div class="secao-conta__cabecalho">
+                    <div>
+                        <h2>Contato</h2>
+                        <p>Usamos esses dados para avisar sobre pedidos e entregas.</p>
+                    </div>
+                </div>
+
+                <div class="campos-duplos">
+                    <div class="campo">
+                        <label for="perfil-email">E-mail <span class="selo selo--laranja">Não verificado</span></label>
+                        <div class="entrada">
+                            <img src="../img/icones/mail-cinza.svg" alt="" width="16" height="16">
+                            <input id="perfil-email" type="email" autocomplete="email">
+                        </div>
+                        <span class="mensagem-erro">Digite um e-mail válido.</span>
+                    </div>
+                    <div class="campo">
+                        <label for="perfil-telefone">Telefone <span class="selo selo--verde">Verificado</span></label>
+                        <div class="entrada">
+                            <img src="../img/icones/phone-cinza.svg" alt="" width="16" height="16">
+                            <input id="perfil-telefone" type="tel" autocomplete="tel">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="link" id="enviar-validacao" style="align-self: flex-start;">Enviar e-mail de validação</button>
+            </section>
+
+            <div class="acoes-conta">
+                <button type="button" class="btn btn--secundario btn--pequeno" id="cancelar-perfil">Cancelar</button>
+                <button type="submit" class="btn btn--primario btn--pequeno">Salvar alterações</button>
+            </div>
+        </form>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/conta.js"></script>
+</body>
+</html>

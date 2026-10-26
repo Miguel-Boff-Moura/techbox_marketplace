@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/conta.css">
+    <title>TechBox | Minha conta</title>
+</head>
+<body class="com-abas" data-aba="conta" data-secao="painel" data-cabecalho="nenhum">
+
+    <header id="cabecalho"></header>
+
+    <main class="container conta-pagina">
+        <aside class="menu-conta" id="menu-conta"></aside>
+
+        <div class="conta__conteudo">
+            <!-- versão desktop -->
+            <div class="painel-desktop">
+                <div class="perfil-topo">
+                    <img src="../img/avatar.png" alt="Foto de perfil">
+                    <div>
+                        <h1 class="js-nome-usuario">Neymar Santos</h1>
+                        <p class="js-email-usuario">neymar.santos@email.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aviso painel-desktop">
+                <p>Valide seu e-mail e mantenha sua conta segura</p>
+                <button type="button" class="js-fechar-aviso" aria-label="Fechar aviso"><img src="../img/icones/x-cinza.svg" alt="" width="16" height="16"></button>
+            </div>
+
+            <div class="cartoes-conta painel-desktop">
+                <a class="cartao-conta" href="perfil.html">
+                    <div class="cartao-conta__topo">
+                        <span class="icone-caixa"><img src="../img/icones/idcard.svg" alt="" width="20" height="20"></span>
+                        <span class="alerta">!</span>
+                    </div>
+                    <div>
+                        <strong>Informações do seu perfil</strong>
+                        <p>Dados pessoais e da conta.</p>
+                    </div>
+                </a>
+                <a class="cartao-conta" href="seguranca.html">
+                    <div class="cartao-conta__topo">
+                        <span class="icone-caixa"><img src="../img/icones/lock-azul.svg" alt="" width="20" height="20"></span>
+                        <span class="alerta">!</span>
+                    </div>
+                    <div>
+                        <strong>Segurança</strong>
+                        <p>Você tem configurações pendentes.</p>
+                    </div>
+                </a>
+                <a class="cartao-conta" href="privacidade.html">
+                    <div class="cartao-conta__topo">
+                        <span class="icone-caixa"><img src="../img/icones/shield-azul.svg" alt="" width="20" height="20"></span>
+                    </div>
+                    <div>
+                        <strong>Privacidade</strong>
+                        <p>Preferências e controle do uso dos seus dados.</p>
+                    </div>
+                </a>
+                <a class="cartao-conta" href="techbox-plus.html">
+                    <div class="cartao-conta__topo">
+                        <span class="icone-caixa"><img src="../img/icones/crown-azul.svg" alt="" width="20" height="20"></span>
+                    </div>
+                    <div>
+                        <strong>TechBox+</strong>
+                        <p>Assinatura com benefícios em frete, compras e atendimento.</p>
+                    </div>
+                </a>
+                <a class="cartao-conta" href="cartoes.html">
+                    <div class="cartao-conta__topo">
+                        <span class="icone-caixa"><img src="../img/icones/card-azul.svg" alt="" width="20" height="20"></span>
+                    </div>
+                    <div>
+                        <strong>Cartões</strong>
+                        <p>Cartões salvos na sua conta.</p>
+                    </div>
+                </a>
+                <a class="cartao-conta" href="enderecos.html">
+                    <div class="cartao-conta__topo">
+                        <span class="icone-caixa"><img src="../img/icones/pin-azul.svg" alt="" width="20" height="20"></span>
+                    </div>
+                    <div>
+                        <strong>Endereços</strong>
+                        <p>Endereços salvos na sua conta.</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- versão mobile -->
+            <div class="conta-mobile">
+                <div class="conta-mobile__perfil">
+                    <img src="../img/avatar-60.png" alt="Foto de perfil">
+                    <div>
+                        <strong class="js-nome-usuario">Neymar Santos</strong>
+                        <p class="js-email-usuario">neymar.santos@email.com</p>
+                        <a href="perfil.html">Meu perfil <img src="../img/icones/chev-r-azul-12.svg" alt="" width="12" height="12"></a>
+                    </div>
+                </div>
+
+                <nav class="atalhos">
+                    <a href="compras.html"><span><img src="../img/icones/pkg-azul.svg" alt="" width="20" height="20"></span>Compras</a>
+                    <a href="#" class="js-em-breve"><span><img src="../img/icones/heart-azul.svg" alt="" width="20" height="20"></span>Favoritos</a>
+                    <a href="#" class="js-em-breve"><span><img src="../img/icones/star-azul.svg" alt="" width="20" height="20"></span>Opiniões</a>
+                    <a href="#" class="js-em-breve"><span><img src="../img/icones/chat-azul.svg" alt="" width="20" height="20"></span>Perguntas</a>
+                </nav>
+
+                <nav class="lista-conta">
+                    <a href="perfil.html">
+                        <span class="icone-caixa"><img src="../img/icones/user-azul-20.svg" alt="" width="20" height="20"></span>
+                        <div><strong>Informações do seu perfil</strong><p>Dados pessoais e da conta.</p></div>
+                        <img src="../img/icones/chev-r-16.svg" alt="" width="16" height="16">
+                    </a>
+                    <a href="seguranca.html">
+                        <span class="icone-caixa"><img src="../img/icones/shield-azul.svg" alt="" width="20" height="20"></span>
+                        <div><strong>Segurança</strong><p class="laranja">Você tem configurações pendentes.</p></div>
+                        <span class="alerta">!</span>
+                        <img src="../img/icones/chev-r-16.svg" alt="" width="16" height="16">
+                    </a>
+                    <a href="privacidade.html">
+                        <span class="icone-caixa"><img src="../img/icones/lock-azul.svg" alt="" width="20" height="20"></span>
+                        <div><strong>Privacidade</strong><p>Preferências e controle do uso dos seus dados.</p></div>
+                        <img src="../img/icones/chev-r-16.svg" alt="" width="16" height="16">
+                    </a>
+                    <a href="techbox-plus.html">
+                        <span class="icone-caixa"><img src="../img/icones/star-azul.svg" alt="" width="20" height="20"></span>
+                        <div><strong>TechBox+</strong><p>Assinatura com benefícios em frete e compras.</p></div>
+                        <img src="../img/icones/chev-r-16.svg" alt="" width="16" height="16">
+                    </a>
+                    <a href="cartoes.html">
+                        <span class="icone-caixa"><img src="../img/icones/card-azul.svg" alt="" width="20" height="20"></span>
+                        <div><strong>Cartões</strong><p>Cartões salvos na sua conta.</p></div>
+                        <img src="../img/icones/chev-r-16.svg" alt="" width="16" height="16">
+                    </a>
+                    <a href="enderecos.html">
+                        <span class="icone-caixa"><img src="../img/icones/pin-azul.svg" alt="" width="20" height="20"></span>
+                        <div><strong>Endereços</strong><p>Endereços salvos na sua conta.</p></div>
+                        <img src="../img/icones/chev-r-16.svg" alt="" width="16" height="16">
+                    </a>
+                </nav>
+
+                <nav class="lista-conta lista-conta--simples">
+                    <a href="#" class="js-em-breve"><img src="../img/icones/tag-escuro.svg" alt="" width="20" height="20"><span>Marcas que sigo</span><img src="../img/icones/chev-r-16.svg" alt="" width="16" height="16"></a>
+                    <a href="#" class="js-em-breve"><img src="../img/icones/search-escuro.svg" alt="" width="20" height="20"><span>Buscas salvas</span><img src="../img/icones/chev-r-16.svg" alt="" width="16" height="16"></a>
+                    <a href="techbox-plus.html"><img src="../img/icones/receipt-escuro.svg" alt="" width="20" height="20"><span>Assinaturas</span><img src="../img/icones/chev-r-16.svg" alt="" width="16" height="16"></a>
+                    <a href="#" class="js-em-breve"><img src="../img/icones/receipt-escuro.svg" alt="" width="20" height="20"><span>Faturamento</span><img src="../img/icones/chev-r-16.svg" alt="" width="16" height="16"></a>
+                </nav>
+
+                <button type="button" class="btn-sair js-sair">Sair da conta</button>
+            </div>
+        </div>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/conta.js"></script>
+</body>
+</html>

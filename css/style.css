@@ -1,0 +1,1743 @@
+/* =========================================================
+   TechBox - estilos globais
+   (cores, cabeçalho, rodapé, barra de abas, cards, botões,
+   formulários, modais e toast usados em todas as páginas)
+   ========================================================= */
+
+:root {
+    --azul: #3066a1;
+    --azul-escuro: #21344b;
+    --azul-claro: #eef3ff;
+    --fundo: #f6f8fc;
+    --fundo-mobile: #f5f7fb;
+    --fundo-imagem: #f0f4fa;
+    --branco: #ffffff;
+    --texto: #101828;
+    --texto-2: #5f6b7a;
+    --texto-3: #8a94a6;
+    --borda: #e2e7f0;
+    --borda-2: #cbd3e1;
+    --verde: #159b68;
+    --verde-claro: #e6f7f0;
+    --vermelho: #d92d20;
+    --vermelho-claro: #fdecea;
+    --laranja: #b86e00;
+    --laranja-claro: #fff4e0;
+    --amarelo: #f59e0b;
+    --roxo: #be3fd0;
+    --rodape: #0c1425;
+    --sombra: 0 8px 28px rgba(16, 24, 40, 0.05);
+    --sombra-forte: 0 16px 48px rgba(16, 24, 40, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    font-size: 14px;
+    line-height: normal;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+}
+
+/* classes para esconder coisas em cada tamanho de tela */
+.so-mobile {
+    display: none !important;
+}
+
+.escondido {
+    display: none !important;
+}
+
+/* ---------- ícone padrão ---------- */
+.icone {
+    flex-shrink: 0;
+}
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+.cabecalho {
+    background: var(--branco);
+    border-bottom: 1px solid var(--borda);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.cabecalho__barra {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 0 24px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    width: 157px;
+    flex-shrink: 0;
+}
+
+.marca img {
+    width: 49px;
+    height: 56px;
+    object-fit: cover;
+}
+
+.marca span {
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 4px;
+}
+
+.menu {
+    display: flex;
+    gap: 26px;
+    width: 384px;
+    flex-shrink: 1;
+}
+
+.menu a {
+    position: relative;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--texto-2);
+    white-space: nowrap;
+}
+
+.menu a:hover {
+    color: var(--azul);
+}
+
+.menu a.ativo {
+    color: var(--azul);
+    font-weight: 600;
+}
+
+.menu a.ativo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--azul);
+}
+
+.busca {
+    width: 360px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 14px;
+    background: var(--fundo);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    flex-shrink: 1;
+    min-width: 180px;
+}
+
+.busca input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 13px;
+}
+
+.busca input::placeholder {
+    color: var(--texto-3);
+}
+
+.busca:focus-within {
+    border-color: var(--azul);
+}
+
+.acoes {
+    width: 224px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.acoes__conta {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.acoes__conta:hover {
+    background: var(--fundo);
+}
+
+.acoes__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.acoes__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.acoes__carrinho {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background: var(--azul-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contador {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    border-radius: 999px;
+    background: var(--azul);
+    color: var(--branco);
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contador.vazio {
+    display: none;
+}
+
+/* cabeçalho do mobile (fica escondido no desktop) */
+.cabecalho-mobile {
+    display: none;
+}
+
+/* =========================================================
+   TRILHA DE NAVEGAÇÃO (breadcrumb)
+   ========================================================= */
+.trilha {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    color: var(--texto-3);
+}
+
+.trilha a:hover {
+    color: var(--azul);
+}
+
+.trilha strong {
+    font-weight: 500;
+    color: var(--texto);
+}
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+.btn {
+    height: 46px;
+    padding: 0 20px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    transition: filter 0.2s, background 0.2s;
+}
+
+.btn--primario {
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.btn--primario:hover {
+    filter: brightness(1.1);
+}
+
+.btn--secundario {
+    background: var(--branco);
+    border-color: var(--borda-2);
+    color: var(--texto);
+}
+
+.btn--secundario:hover {
+    background: var(--fundo);
+}
+
+.btn--contorno {
+    background: var(--branco);
+    border-color: var(--azul);
+    color: var(--azul);
+}
+
+.btn--perigo {
+    background: var(--vermelho);
+    color: var(--branco);
+}
+
+.btn--perigo-contorno {
+    background: var(--branco);
+    border-color: #f1b5b0;
+    color: var(--vermelho);
+}
+
+.btn--bloco {
+    width: 100%;
+    height: 48px;
+}
+
+.btn--pequeno {
+    height: 40px;
+    padding: 0 18px;
+}
+
+.btn:disabled {
+    background: var(--texto-2);
+    border-color: var(--texto-2);
+    color: var(--branco);
+    cursor: not-allowed;
+    filter: none;
+}
+
+.link {
+    color: var(--azul);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   SELOS
+   ========================================================= */
+.selo {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.selo--verde {
+    background: var(--verde-claro);
+    color: var(--verde);
+}
+
+.selo--azul {
+    background: var(--azul-claro);
+    color: var(--azul);
+}
+
+.selo--laranja {
+    background: var(--laranja-claro);
+    color: var(--laranja);
+}
+
+.selo--vermelho {
+    background: var(--vermelho-claro);
+    color: var(--vermelho);
+}
+
+/* =========================================================
+   CARD DE PRODUTO
+   ========================================================= */
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 286px));
+    gap: 24px;
+}
+
+.card-produto {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 375px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-produto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(16, 24, 40, 0.1);
+}
+
+.card-produto__imagem {
+    position: relative;
+    height: 218px;
+    background: var(--fundo-imagem);
+    display: block;
+}
+
+.card-produto__imagem a {
+    display: block;
+    height: 100%;
+}
+
+.card-produto__imagem img.foto {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-produto__imagem img.foto.cobrir {
+    object-fit: cover;
+}
+
+.card-produto__selo {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--azul);
+    color: var(--branco);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.card-produto__favoritar {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: var(--branco);
+    box-shadow: var(--sombra);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-produto__favoritar.favorito {
+    background: #ffe9ec;
+}
+
+.lista-explorar .card-produto__favoritar {
+    display: flex;
+}
+
+.card-produto__info {
+    flex: 1;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.avaliacao {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+}
+
+.avaliacao strong {
+    font-weight: 600;
+}
+
+.avaliacao .estoque {
+    color: var(--verde);
+}
+
+.card-produto__nome {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.card-produto__specs {
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--texto-2);
+}
+
+.card-produto__preco {
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.card-produto__preco s {
+    display: block;
+    font-size: 11px;
+    color: var(--texto-3);
+    margin-bottom: 2px;
+}
+
+.card-produto__preco strong {
+    font-size: 19px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.card-produto__parcelas {
+    display: none;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--verde);
+}
+
+.btn-adicionar {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: var(--azul);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.btn-adicionar:hover {
+    filter: brightness(1.1);
+}
+
+/* =========================================================
+   FORMULÁRIOS
+   ========================================================= */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.campo > label,
+.campo__rotulo {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--texto-2);
+}
+
+.entrada {
+    height: 42px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--branco);
+    border: 1px solid var(--borda-2);
+    border-radius: 8px;
+}
+
+.entrada:focus-within {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(48, 102, 161, 0.12);
+}
+
+.entrada input,
+.entrada select {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 12px;
+}
+
+.entrada input::placeholder {
+    color: var(--texto-3);
+}
+
+.entrada select {
+    cursor: pointer;
+}
+
+.campo.erro .entrada {
+    border-color: var(--vermelho);
+}
+
+.campo .mensagem-erro {
+    font-size: 11px;
+    color: var(--vermelho);
+    display: none;
+}
+
+.campo.erro .mensagem-erro {
+    display: block;
+}
+
+.btn-olho {
+    display: flex;
+    opacity: 0.8;
+}
+
+.btn-olho.ativo {
+    opacity: 0.4;
+}
+
+/* checkbox e radio desenhados igual ao figma */
+.caixa-selecao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--texto-2);
+    cursor: pointer;
+    user-select: none;
+}
+
+.caixa-selecao input {
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border: 1px solid var(--borda-2);
+    border-radius: 5px;
+    background: var(--branco);
+    flex-shrink: 0;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.caixa-selecao input[type="radio"] {
+    border-radius: 999px;
+}
+
+.caixa-selecao input:checked {
+    background: var(--azul) url("../img/icones/check-branco.svg") no-repeat center / 11px;
+    border-color: var(--azul);
+}
+
+/* interruptor (toggle) */
+.interruptor {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.interruptor input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.interruptor span {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: #dbe1ea;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.interruptor span::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--branco);
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.2);
+    transition: transform 0.2s;
+}
+
+.interruptor input:checked + span {
+    background: var(--azul);
+}
+
+.interruptor input:checked + span::before {
+    transform: translateX(20px);
+}
+
+/* seletor de quantidade */
+.quantidade {
+    height: 36px;
+    width: 100px;
+    padding: 0 10px;
+    border: 1px solid var(--borda-2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.quantidade button {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.quantidade button:hover {
+    background: var(--fundo);
+}
+
+/* =========================================================
+   CAIXA (card branco genérico)
+   ========================================================= */
+.caixa {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+}
+
+.caixa--sombra {
+    box-shadow: var(--sombra);
+}
+
+.divisor {
+    height: 1px;
+    background: var(--borda);
+    width: 100%;
+    border: none;
+}
+
+/* linhas de valores (resumos de pedido) */
+.verde {
+    color: var(--verde);
+}
+
+.vermelho {
+    color: var(--vermelho);
+}
+
+.linha-valor {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.linha-valor span {
+    color: var(--texto-2);
+}
+
+.linha-valor strong {
+    font-weight: 500;
+}
+
+/* item de produto nos resumos (checkout, pix, pedido) */
+.item-pedido {
+    display: flex;
+    gap: 12px;
+}
+
+.item-pedido + .item-pedido {
+    margin-top: 12px;
+}
+
+.item-pedido__imagem {
+    width: 82px;
+    height: 72px;
+    border-radius: 8px;
+    background: var(--fundo-imagem);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.item-pedido__imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.item-pedido__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 11px;
+    color: var(--texto-2);
+}
+
+.item-pedido__info strong,
+.item-pedido__preco {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--texto);
+    white-space: nowrap;
+}
+
+/* =========================================================
+   ETAPAS DO CHECKOUT
+   ========================================================= */
+.etapas {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+}
+
+.etapa {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--texto-3);
+    white-space: nowrap;
+}
+
+.etapa__numero {
+    width: 24px;
+    height: 24px;
+    border-radius: 999px;
+    border: 1px solid var(--borda-2);
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+}
+
+.etapa--feita {
+    color: var(--texto-2);
+}
+
+.etapa--feita .etapa__numero {
+    background: var(--verde-claro);
+    border-color: var(--verde-claro);
+}
+
+.etapa--atual {
+    color: var(--texto);
+    font-weight: 600;
+}
+
+.etapa--atual .etapa__numero {
+    background: var(--azul);
+    border-color: var(--azul);
+    color: var(--branco);
+    font-weight: 700;
+}
+
+.etapas__linha {
+    width: 42px;
+    height: 1px;
+    background: var(--borda-2);
+}
+
+.etapas__linha--feita {
+    background: var(--azul);
+}
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+.rodape {
+    background: var(--rodape);
+    color: var(--branco);
+    padding: 38px 96px 24px;
+    margin-top: auto;
+}
+
+.rodape__conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.rodape__marca {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rodape__marca p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: #aab3c2;
+}
+
+.rodape__coluna {
+    width: 170px;
+}
+
+.rodape__coluna h4 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.rodape__coluna h4 button {
+    display: none;
+}
+
+.rodape__coluna ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rodape__coluna a {
+    font-size: 12px;
+    color: #aab3c2;
+}
+
+.rodape__coluna a:hover {
+    color: var(--branco);
+}
+
+.rodape__base {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid #263248;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #7f8a9d;
+}
+
+/* =========================================================
+   BARRA DE ABAS (só aparece no mobile)
+   ========================================================= */
+.abas {
+    display: none;
+}
+
+/* =========================================================
+   MODAL / POP-UP
+   ========================================================= */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(16, 24, 40, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.modal.aberto {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal__caixa {
+    width: 100%;
+    max-width: 437px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    box-shadow: var(--sombra-forte);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    transform: translateY(12px);
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.modal.aberto .modal__caixa {
+    transform: none;
+}
+
+.modal__titulo {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+}
+
+/* modal de confirmação (remover, sair, excluir) */
+.dialogo {
+    max-width: 380px;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 12px;
+}
+
+.dialogo__icone {
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--azul-claro);
+}
+
+.dialogo__icone--perigo {
+    background: var(--vermelho-claro);
+}
+
+.dialogo h3 {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.dialogo p {
+    font-size: 14px;
+    color: var(--texto-2);
+    text-align: center;
+}
+
+.dialogo__botoes {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.dialogo__botoes .btn {
+    flex: 1;
+    height: 48px;
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+/* modal "produto adicionado" (no mobile vira folha que sobe de baixo) */
+.adicionado__titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.adicionado__check {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    background: var(--verde);
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.adicionado__produto {
+    display: none;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 14px;
+    background: var(--fundo-mobile);
+}
+
+.adicionado__produto img {
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    background: var(--branco);
+    object-fit: contain;
+}
+
+.adicionado__produto strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.adicionado__produto span {
+    font-size: 12px;
+    color: var(--texto-2);
+}
+
+@media (max-width: 768px) {
+    .adicionado__check.so-mobile {
+        display: flex !important;
+    }
+
+    .adicionado .modal__titulo {
+        font-size: 15px;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .adicionado__produto {
+        display: flex;
+    }
+
+    .adicionado .btn {
+        height: 50px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+}
+
+/* zoom da imagem */
+.modal-zoom .modal__caixa {
+    max-width: 760px;
+    padding: 24px;
+}
+
+.modal-zoom img {
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.modal__fechar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--fundo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================================
+   TOAST (avisos rápidos)
+   ========================================================= */
+.toast {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    z-index: 300;
+    width: calc(100% - 32px);
+    max-width: 420px;
+    transform: translate(-50%, -20px);
+    background: var(--texto);
+    color: var(--branco);
+    border-radius: 14px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s;
+}
+
+.toast.visivel {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.toast__icone {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    background: var(--verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.toast__icone.aviso {
+    background: var(--amarelo);
+    font-weight: 700;
+}
+
+.toast strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.toast p {
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-top: 2px;
+}
+
+/* =========================================================
+   RESPONSIVO - telas médias (notebooks pequenos)
+   ========================================================= */
+@media (max-width: 1280px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .cabecalho__barra {
+        gap: 20px;
+    }
+
+    .menu {
+        width: auto;
+    }
+
+    .rodape {
+        padding: 38px 24px 24px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cabecalho__barra {
+        gap: 14px;
+    }
+
+    .acoes {
+        width: auto;
+    }
+
+    .acoes__conta span {
+        display: none;
+    }
+
+    .rodape__marca {
+        width: 260px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVO - mobile e tablet (390px e 720px)
+   ========================================================= */
+@media (max-width: 768px) {
+    body {
+        background: var(--fundo-mobile);
+    }
+
+    .so-desktop {
+        display: none !important;
+    }
+
+    .so-mobile {
+        display: revert !important;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    /* cabeçalho */
+    .cabecalho__barra {
+        display: none;
+    }
+
+    .cabecalho-mobile {
+        display: block;
+    }
+
+    /* páginas sem cabeçalho no mobile (ex: pedido confirmado) */
+    .cabecalho:not(:has(.cabecalho-mobile)) {
+        display: none;
+    }
+
+    .cabecalho-mobile__linha {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 16px;
+    }
+
+    .cabecalho-mobile .marca {
+        width: auto;
+    }
+
+    .cabecalho-mobile .marca img {
+        width: 29px;
+        height: 34px;
+    }
+
+    .cabecalho-mobile .marca span {
+        font-size: 11px;
+        margin-left: 2px;
+    }
+
+    .cabecalho-mobile__carrinho {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cabecalho-mobile__carrinho .contador {
+        top: 2px;
+        right: auto;
+        left: 22px;
+        min-width: 16px;
+        height: 16px;
+    }
+
+    .cabecalho-mobile .busca {
+        width: auto;
+        margin: 0 16px 12px;
+        height: 44px;
+        border-radius: 10px;
+        background: var(--fundo-imagem);
+    }
+
+    .cabecalho-mobile .busca input {
+        font-size: 14px;
+    }
+
+    .titulo-mobile {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 6px 16px 12px 8px;
+    }
+
+    .titulo-mobile__voltar {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .titulo-mobile h1 {
+        flex: 1;
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    .titulo-mobile__busca {
+        display: flex;
+    }
+
+    .busca-mobile-aberta .titulo-mobile h1 {
+        display: none;
+    }
+
+    .titulo-mobile .busca {
+        display: none;
+        flex: 1;
+        margin: 0;
+        height: 40px;
+    }
+
+    .busca-mobile-aberta .titulo-mobile .busca {
+        display: flex;
+    }
+
+    .trilha {
+        display: none;
+    }
+
+    /* cards de produto no mobile */
+    .grade-produtos {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
+    }
+
+    .card-produto {
+        min-height: 0;
+        border-radius: 12px;
+        box-shadow: none;
+    }
+
+    .card-produto:hover {
+        transform: none;
+    }
+
+    .card-produto__imagem {
+        height: 140px;
+        background: var(--branco);
+    }
+
+    .card-produto__selo {
+        top: 8px;
+        left: 8px;
+        padding: 3px 7px;
+        border-radius: 6px;
+        font-size: 10px;
+    }
+
+    .card-produto__selo.desconto {
+        background: var(--verde);
+    }
+
+    .card-produto__favoritar {
+        display: flex;
+        top: 8px;
+        right: 6px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--borda);
+        box-shadow: none;
+    }
+
+    .card-produto__info {
+        padding: 10px 12px 12px;
+        gap: 4px;
+    }
+
+    .avaliacao {
+        gap: 4px;
+        font-size: 11px;
+        color: var(--texto-2);
+    }
+
+    .avaliacao strong {
+        font-weight: 500;
+    }
+
+    .avaliacao .estoque {
+        display: none;
+    }
+
+    .card-produto__nome {
+        font-size: 13px;
+        line-height: normal;
+    }
+
+    .card-produto__specs {
+        font-size: 11px;
+        line-height: normal;
+    }
+
+    .card-produto__preco {
+        margin-top: 0;
+    }
+
+    .card-produto__preco strong {
+        font-size: 17px;
+    }
+
+    .card-produto__parcelas {
+        display: block;
+        margin-top: 4px;
+    }
+
+    .btn-adicionar {
+        display: none;
+    }
+
+    /* carrossel horizontal no mobile */
+    .carrossel {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 0 16px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .carrossel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carrossel .card-produto {
+        width: 177px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
+    /* etapas do checkout */
+    .etapas {
+        width: 100%;
+        justify-content: space-between;
+        gap: 4px;
+        font-size: 11px;
+        background: var(--branco);
+        padding: 12px 16px 14px;
+    }
+
+    .etapa {
+        gap: 6px;
+    }
+
+    .etapa__numero {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .etapas__linha {
+        display: none;
+    }
+
+    /* rodapé com sanfona (no mobile só aparece na home) */
+    .rodape {
+        display: none;
+    }
+
+    .rodape-mobile .rodape {
+        display: block;
+    }
+
+    .rodape {
+        background: #0d1526;
+        padding: 24px 16px;
+    }
+
+    .rodape__conteudo {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .rodape__marca {
+        width: 100%;
+        margin-bottom: 14px;
+        gap: 0;
+    }
+
+    .rodape__marca .marca img {
+        display: none;
+    }
+
+    .rodape__marca .marca span {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .rodape__marca p {
+        font-size: 12px;
+        color: #9aa6bb;
+        line-height: normal;
+    }
+
+    .rodape__coluna {
+        width: 100%;
+        border-top: 1px solid #1e2a40;
+    }
+
+    .rodape__coluna h4 {
+        margin: 0;
+    }
+
+    .rodape__coluna h4 button {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--branco);
+    }
+
+    .rodape__coluna h4 button img {
+        transition: transform 0.2s;
+    }
+
+    .rodape__coluna h4 .titulo-desktop {
+        display: none;
+    }
+
+    .rodape__coluna ul {
+        display: none;
+        padding-bottom: 14px;
+    }
+
+    .rodape__coluna.aberta ul {
+        display: flex;
+    }
+
+    .rodape__coluna.aberta h4 button img {
+        transform: rotate(90deg);
+    }
+
+    .rodape__base {
+        margin-top: 0;
+        padding: 16px 0 4px;
+        border-top: 1px solid #1e2a40;
+        font-size: 10px;
+        color: #7d8aa3;
+    }
+
+    .rodape__base span:last-child {
+        display: none;
+    }
+
+    /* barra de abas fixa embaixo */
+    body.com-abas {
+        padding-bottom: 72px;
+    }
+
+    .com-abas .abas {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 60;
+        background: var(--branco);
+        border-top: 1px solid var(--borda);
+        padding: 8px 0 12px;
+    }
+
+    .abas a {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        font-size: 10px;
+        font-weight: 500;
+        color: var(--texto-3);
+    }
+
+    .abas a.ativo {
+        color: var(--azul);
+        font-weight: 600;
+    }
+
+    .abas__icone {
+        position: relative;
+    }
+
+    .abas .contador {
+        top: -4px;
+        right: -8px;
+        min-width: 16px;
+        height: 16px;
+    }
+
+    /* barra fixa de ação (produto, carrinho, checkout) */
+    body.com-barra-fixa {
+        padding-bottom: 90px;
+    }
+
+    .barra-fixa {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 60;
+        background: var(--branco);
+        border-top: 1px solid var(--borda);
+        padding: 12px 16px 20px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .barra-fixa .btn {
+        flex: 1;
+        height: 50px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+
+    .barra-fixa__total span {
+        display: block;
+        font-size: 11px;
+        color: var(--texto-2);
+    }
+
+    .barra-fixa__total strong {
+        font-size: 18px;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+
+    /* modal produto adicionado vira folha de baixo */
+    .modal--folha {
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .modal--folha .modal__caixa {
+        max-width: none;
+        border-radius: 24px 24px 0 0;
+        border: none;
+        padding: 12px 20px 32px;
+        align-items: stretch;
+        gap: 16px;
+        transform: translateY(100%);
+    }
+
+    .modal--folha.aberto .modal__caixa {
+        transform: none;
+    }
+
+    .modal--folha .modal__caixa::before {
+        content: '';
+        width: 40px;
+        height: 4px;
+        border-radius: 2px;
+        background: var(--borda);
+        align-self: center;
+    }
+
+    .toast {
+        top: 56px;
+    }
+}
+
+/* barra fixa só existe no mobile */
+@media (min-width: 769px) {
+    .barra-fixa {
+        display: none !important;
+    }
+}

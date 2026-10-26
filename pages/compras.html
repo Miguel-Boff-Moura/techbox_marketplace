@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/conta.css">
+    <title>TechBox | Compras</title>
+</head>
+<body class="com-abas" data-aba="conta" data-secao="compras" data-titulo="Compras" data-voltar="minha-conta.html">
+
+    <header id="cabecalho"></header>
+
+    <main class="container conta-pagina">
+        <aside class="menu-conta" id="menu-conta"></aside>
+
+        <div class="conta__conteudo">
+            <nav class="conta__trilha">
+                <a href="minha-conta.html">Minha conta</a>
+                <img src="../img/icones/chevron-right.svg" alt="" width="13" height="13">
+                <strong>Compras</strong>
+            </nav>
+
+            <div class="conta__titulo">
+                <h1>Compras</h1>
+            </div>
+
+            <div class="filtros-compras">
+                <div class="filtros-compras__linha">
+                    <div class="entrada">
+                        <img src="../img/icones/search-16.svg" alt="" width="16" height="16">
+                        <input type="search" id="busca-compras" placeholder="Buscar por produto ou número do pedido" aria-label="Buscar compras">
+                    </div>
+                    <label class="periodo">
+                        <select id="periodo-compras" aria-label="Período">
+                            <option value="6meses">Últimos 6 meses</option>
+                            <option value="2026">Ano de 2026</option>
+                            <option value="todos">Todas as compras</option>
+                        </select>
+                        <img src="../img/icones/chevron-down-16.svg" alt="" width="16" height="16">
+                    </label>
+                </div>
+                <div class="abas-status">
+                    <button type="button" class="ativo" data-status="todos">Todos</button>
+                    <button type="button" data-status="andamento">Em andamento</button>
+                    <button type="button" data-status="entregues">Entregues</button>
+                    <button type="button" data-status="cancelados">Cancelados</button>
+                </div>
+            </div>
+
+            <div id="lista-compras"></div>
+        </div>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/conta.js"></script>
+</body>
+</html>

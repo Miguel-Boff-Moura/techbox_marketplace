@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pedido.css">
+    <title>TechBox | Pedido confirmado</title>
+</head>
+<body data-cabecalho="nenhum">
+
+    <header id="cabecalho"></header>
+
+    <main class="confirmado">
+        <div class="confirmado__topo">
+            <img class="confirmado__sacola so-desktop" src="../img/sacola-ok.png" alt="" width="118" height="118">
+            <span class="confirmado__check so-mobile"><img src="../img/icones/check-branco-20.svg" alt="" width="40" height="40"></span>
+            <h1>Pedido confirmado!</h1>
+            <p>Obrigado, <span id="primeiro-nome">cliente</span>. Seu pagamento foi aprovado e já estamos preparando tudo para o envio.</p>
+            <span class="confirmado__numero"><span class="so-mobile">Pedido</span> <strong id="numero-pedido">#NX-10482</strong></span>
+        </div>
+
+        <div class="confirmado__conteudo">
+            <section class="caixa caixa--sombra confirmado__resumo">
+                <h2>Resumo do pedido</h2>
+                <div id="itens-confirmado"></div>
+                <hr class="divisor">
+                <div class="linha-valor confirmado__pagamento">
+                    <span>
+                        <img class="so-desktop" src="../img/icones/cartao-cinza.svg" alt="" width="15" height="15">
+                        <span class="so-desktop" id="pagamento-desktop">Cartão</span>
+                        <span class="so-mobile">Pagamento</span>
+                    </span>
+                    <strong id="pagamento-parcelas">12x</strong>
+                </div>
+                <div class="linha-valor verde">
+                    <span class="verde" id="tipo-entrega">Entrega full</span>
+                    <strong class="verde" id="valor-entrega">Grátis</strong>
+                </div>
+                <hr class="divisor">
+                <div class="confirmado__total">
+                    <strong>Total</strong>
+                    <div>
+                        <span id="total-confirmado">R$ 0</span>
+                        <small id="parcelas-confirmado"></small>
+                    </div>
+                </div>
+                <p class="confirmado__protecao so-desktop">
+                    <img src="../img/icones/shield-check.svg" alt="" width="17" height="17">
+                    Pagamento protegido e dados criptografados.
+                </p>
+            </section>
+
+            <section class="caixa confirmado__avisos so-mobile">
+                <p><img src="../img/icones/shieldcheck-azul.svg" alt="" width="18" height="18"> Pagamento protegido e dados criptografados.</p>
+                <p><img src="../img/icones/mail-azul.svg" alt="" width="18" height="18"> <span>Enviamos os detalhes para <span class="js-email">seu e-mail</span></span></p>
+            </section>
+
+            <div class="confirmado__botoes">
+                <a class="btn btn--primario" id="acompanhar" href="rastreamento.html">
+                    <img class="so-mobile" src="../img/icones/package.svg" alt="" width="18" height="18">
+                    Acompanhar pedido
+                </a>
+                <a class="btn btn--secundario" href="../index.html">Continuar comprando</a>
+            </div>
+
+            <p class="confirmado__email so-desktop">
+                <img src="../img/icones/mail.svg" alt="" width="14" height="14">
+                Enviamos os detalhes para <span class="js-email">seu e-mail</span>
+            </p>
+        </div>
+    </main>
+
+    <footer id="rodape"></footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/pedido.js"></script>
+</body>
+</html>
